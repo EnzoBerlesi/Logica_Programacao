@@ -1,45 +1,9 @@
-﻿using System.Threading.Tasks.Dataflow;
-using ConsoleApp1.TesteMesa2;
-using ConsoleApp1.TesteMesa3;
+﻿using System;
 
-public class TesteMesa1
+public class Main
 {
-    static void Main()
-    {
-        int[] v = new int[5];
-        int a = 10;
-        int b = 20;
-        int c = (a + b) / 2;
-        c = c - 40;
-        v[3] = a + b + c;
-        Console.WriteLine("O resultado de v[3] é " + v[3]);
-
-
-        int[] j = new int[6];
-        int aa = 2;
-        while (aa < 6)
-        {
-            j[aa] = 10 * aa; 
-            aa += 1;
-        }
-
-        Console.WriteLine("\n" + aa);
-
-        int[] h = new int[6];
-        int aaa = 7;
-        int bb = aaa - 6;
-        while (bb < aaa)
-        {
-            h[bb] = bb + aaa;
-            bb = bb + aaa;
-        }
-
-        Console.WriteLine("\n" + bb); 
-
-
-
-
-
+	public Main()
+	{
         bool sair = false;
 
         while (!sair)
@@ -60,7 +24,7 @@ public class TesteMesa1
             switch (opcao)
             {
                 case "1":
-                    TesteMesa1.Main();
+                    TesteMesa1.Mesa1();
                     break;
 
                 case "2":
@@ -96,6 +60,6 @@ public class TesteMesa1
                     Console.WriteLine("Ai nao da ne patrao vamo le direito");
                     break;
             }
+
         }
-    }
 }
