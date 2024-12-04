@@ -10,6 +10,7 @@ namespace ConsoleApp1.TesteMesa3
     {
         public void MostrarMenu()
         {
+            Console.WriteLine("\n");
             Console.WriteLine("---Calculo de Rendimento Futuro ---");
             Console.WriteLine("1. Inserir valores e calcular");
             Console.WriteLine("0.Sair");

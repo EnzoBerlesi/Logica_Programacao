@@ -33,7 +33,7 @@ namespace ConsoleApp1.TesteMesa3
             decimal valorAtual = ValorInicial;
             int totalMeses = (int)((DataFinal - DataInicial).TotalDays / 30);
 
-            Console.WriteLine("Mês | Saldo Inicial | Rendimento | Saque | Saldo Final");
+            Console.WriteLine("Mês | Taxa | Saldo Inicial | Rendimento | Saque | Saldo Final");
             Console.WriteLine("-----------------------------------------------------");
 
             decimal rendimento = ValorInicial * (decimal)Math.Pow((double)(1 + TaxaMensal), totalMeses);
@@ -53,7 +53,7 @@ namespace ConsoleApp1.TesteMesa3
 
                 valorAtual += rendimentoMensal;
 
-                Console.WriteLine($"{i,3} | {saldoInicial,14:C2} | {rendimentoMensal,10:C2} | {saque,5:C2} | {valorAtual,12:C2}");
+                Console.WriteLine($"{i,3} | {TaxaMensal:P2} | {saldoInicial,14:C2} | {rendimentoMensal,10:C2} | {saque,5:C2} | {valorAtual,12:C2}");
             }
 
             return valorAtual;
